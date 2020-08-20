@@ -1,10 +1,10 @@
 def prime?(integer)
-  if integer > 0
-  (2..(integer - 1)).each do |n|
-    return false if integer % n == 0
-  end
-elsif integer == 1
-  return false
+  if integer == 1
+    return false
+elsif integer > 0
+(2..(integer - 1)).each do |n|
+  return false if integer % n == 0
+end
   else
     (-2..(integer + 1)).each do |n|
       return false if integer % n == 0
