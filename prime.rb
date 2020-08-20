@@ -3,6 +3,8 @@ def prime?(integer)
   (2..(integer - 1)).each do |n|
     return false if integer % n == 0
   end
+elsif integer == 1
+  return false
   else
     (-2..(integer + 1)).each do |n|
       return false if integer % n == 0
