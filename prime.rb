@@ -1,16 +1,14 @@
 def prime?(integer)
-  case integer
-  when integer == 1
+  if integer == 1
     return false
-  when integer < 0
-    (-2..(integer + 1)).each do |n|
-     return false if integer % n == 0
-    end
-  when integer > 0
+  elsif integer > 0
     (2..(integer - 1)).each do |n|
       return false if integer % n == 0
-    end
+      end
   else
-    true
-  end
+    (-2..(integer + 1)).each do |n|
+      return false if integer % n == 0
+      end
+    end
+  true
 end
